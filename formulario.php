@@ -1,3 +1,24 @@
+<?php
+    if(isset($_POST['submit'])) {
+
+       include_once('config.php');
+
+       $nome = $_POST['nome'];
+       $email = $_POST['email'];
+       $telefone = $_POST['telefone'];
+       $genero = $_POST['genero'];
+       $dataNascimento = $_POST['dataNascimento'];
+       $cidade = $_POST['cidade'];
+       $estado = $_POST['estado'];
+       $endereco = $_POST['endereco'];
+
+       $result = mysqli_query($conexao, "INSERT INTO usuarios VALUES ('', '$nome', '$email', '$telefone', '$genero', '$dataNascimento', '$cidade', '$estado', '$endereco')");  
+    }
+
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +29,7 @@
 </head>
 <body>
     <div class="box">
-        <form action="">
+        <form action="formulario.php" method="post">
             <fieldset>
                 <legend><b>Formulário Pacientes</b></legend>
                 <br>
