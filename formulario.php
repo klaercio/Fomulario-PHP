@@ -13,11 +13,6 @@
 
        $result = mysqli_query($conexao, "INSERT INTO usuarios VALUES ('', '$nome', '$email', '$telefone', '$genero', '$dataNascimento', '$cidade', '$estado', '$endereco')");  
     }
-
-    $sql = "SELECT * FROM usuarios ORDER BY id DESC";
-    $result = $conexao->query($sql);
-
-    print_r($result);    
 ?>
 
 <!DOCTYPE html>
