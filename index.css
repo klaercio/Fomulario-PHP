@@ -1,0 +1,27 @@
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+}
+
+.tabela {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+table thead tr th {
+    background-color:dodgerblue;
+    width: 10rem;
+    text-align: center;
+}
+
+table tbody tr td {
+    text-align: center;
+}

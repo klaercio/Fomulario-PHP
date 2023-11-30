@@ -1,8 +1,7 @@
 <?php
+    include_once('config.php');
+
     if(isset($_POST['submit'])) {
-
-       include_once('config.php');
-
        $nome = $_POST['nome'];
        $email = $_POST['email'];
        $telefone = $_POST['telefone'];
@@ -15,8 +14,10 @@
        $result = mysqli_query($conexao, "INSERT INTO usuarios VALUES ('', '$nome', '$email', '$telefone', '$genero', '$dataNascimento', '$cidade', '$estado', '$endereco')");  
     }
 
+    $sql = "SELECT * FROM usuarios ORDER BY id DESC";
+    $result = $conexao->query($sql);
 
-    
+    print_r($result);    
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +65,7 @@
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Nome completo</label>
+                    <label for="cidade" class="labelInput">Cidade</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
