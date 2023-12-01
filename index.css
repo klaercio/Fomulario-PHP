@@ -14,14 +14,38 @@ body {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
 }
 
-table thead tr th {
-    background-color:dodgerblue;
+/* table thead tr th {
+    border-top: 1px solid dodgerblue;
+    border-bottom: 1px solid dodgerblue;
     width: 10rem;
     text-align: center;
 }
+ */
 
+td {
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    padding: 1rem 2rem;
+}
+
+thead {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+ 
 table tbody tr td {
     text-align: center;
+}
+
+.btn_acao {
+    background: dodgerblue;
+    border: none;
+}
+
+.columnAcao form {
+    display: flex;
+    gap: 5px;
 }
